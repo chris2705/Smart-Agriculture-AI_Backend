@@ -13,3 +13,4 @@ sqlalchemy
 pymysql
 google-genai
 python-dotenv
+python-multipart
