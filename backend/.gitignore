@@ -8,3 +8,6 @@ firebase_key.json
 *api_key*
 *API_KEY*
 node_modules/
+.env
+smartagri/
+node_modules/

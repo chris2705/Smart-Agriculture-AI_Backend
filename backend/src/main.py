@@ -36,7 +36,7 @@ app.include_router(fields.router)
 # ===============================
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for development (restrict in production)
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

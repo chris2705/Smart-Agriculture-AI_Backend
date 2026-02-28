@@ -10,3 +10,6 @@ google-generativeai
 python-jose[cryptography]
 passlib[bcrypt]
 sqlalchemy
+pymysql
+google-genai
+python-dotenv
