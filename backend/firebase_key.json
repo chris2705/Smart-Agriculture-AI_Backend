@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smart-agriculture-ai-2369e",
+  "private_key_id": "7ab8f5835631d1723ddd733c8e7a97a9381d5da7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCyfBDJ10sQa3lK\nP7kKvnk7AwgTcMlhDbxFX42qWvAazsSz1Fm3BBDuE3YYqdR6Leq9XhVBZTETcWZN\n7v8kE8DwAo2kXZHmyqdEj/k4Nd1ANWIaIhn33Nwcw7MvWiGBqBN6RNt1lu71DSD5\nXCmQnlkrN8bn3fRl0t0acG/G8MBUqFZUuqEK4x523mAra0AxHugwAfW8X0Q2YZut\nI09cbceP/mkXtfzeuKTKbhPK6CU10wsmiRcN1TeUT3OfI356Z5OuSVrsPFGPfliO\nCm72BOlb7DjM+ZRYLl3NAyTGG8S4LAyj3O8Iezt/rAt3syF+xQAcAmI+q4jbYMJ7\nemvJgdO7AgMBAAECggEAEhRUJQXsYhzo29cJmOeDYzFi64k0tOKNzB8qO/PbN3Pz\nY93iOpIsXtlU0Jm/XqLxEL6Le6TS7EvD16gaax6fIBC6JUifI1gqylylG4cFQuBF\ncC09ISjbmQRPzb+c/kO2uV9pNYeU6/io+ulVgoMvuBt9x/XpMDlEUU3LXMT9TnXV\nbotr1IknbYZUGMdYUq6RQ1wBCxKZnMm7x7zG71Ts0nvVITDpa5dFQobGSf0P/96u\nDF/tGZFOzE1jxGRxBNC0SDySGAbkKEbi23jzOYZps+IsBUTVpUiHFRFbjaGAHe21\ncob2o4T9IUh2ZwwwjiH+ogBjWwCXVfPPtH678Wp+pQKBgQDhn6zwq6uJLz8QsZ3y\nn4JdeIBa9NWMI3oikNSSbYirwq6k+T5BjpewsGPwOQznO4HYdQxs1sGP0M3xjhox\nuXNoF6VjFzgVe0q+lqrM9sCIdkJUbQ9ebaEH3FSaMEbeEYdYgCuQRwePxLU6jQay\nYIckefHWD1ICEGA6oO6cKkG0twKBgQDKg7LW6tDGmEk7ujk8mZ4WJNdVcLovfP8q\n2SXkqweT8sT+NpFkGlN6CeFikklNGNojXMjT4fPieLSymzzhk9OZoUoffYSQpBQD\nYi5Xfpi545EZjiNdOgEbVxGV52jRnhvAkR5coqeIPfCF7kGhS5vnFh50fgUoNzkn\nfg4n9sV9HQKBgFurJ3WlGg2jv4jF0XmZKztU0TmjTfwhEednVqajkCrQ72ohxhSW\nnbTxBbm9RCvStp++dqzl2EDZQkNJTAU15ti8+ro23deEf0rOJlkeS/1lpu9sXBku\ni4WJFGqNAM4K6yWe9ZQp972G22cNk1H3/BBq50HkeZpTEvXfGvMiDA4jAoGADgzz\nJIwoLg80zYsPG5BA8qJdulTW5iKTBaMJSQNAxFgMqOKaVcqpzgbPd2pU4Z9+ywNN\n/71mkWj0iIvSvofmH3ucS/EGeI6ZwN5X/sQOzp7mW1KMS5SRrRbuZmsmz5xbqpGm\n/KBgZUh+3pv4O7umNnNHa6eureqe8YmCa+1oKFUCgYBmfx4lB0O2/4RRZmXR1SmK\nEtDiNNZqncZHYRJdtpmpsTWFoFWusjpa5/uOgJlPLTRkYsRhFugDbj+8MSN71ucJ\nuo9O4WaQ/SoFEaganFnzmV5ObpovS/iyOWLMo1qZFsSx557pM+jcEMpFcC2UGo6B\ntJG5w8JifACd2akPL8k9vA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@smart-agriculture-ai-2369e.iam.gserviceaccount.com",
+  "client_id": "106524906820895173839",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40smart-agriculture-ai-2369e.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
