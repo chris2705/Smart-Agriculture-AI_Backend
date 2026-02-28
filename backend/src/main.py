@@ -59,22 +59,35 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 # GOOGLE DRIVE DIRECT LINKS
 # (REPLACE WITH YOUR LINKS)
 # ===============================
-CROP_MODEL_URL = "https://drive.google.com/uc?export=download&id=1ujgYFRPIHpi1E2Zg-oePAddC7-4PYpDN"
-FERT_MODEL_URL = "https://drive.google.com/uc?export=download&id=1APYnk3VrMPwGEHz5jKftAUwJgutqhQ0J"
-CROP_LE_URL = "https://drive.google.com/uc?export=download&id=11JyTimrKC2cddYzp6FpwoQrcgcw_nS0t"
-FERT_LE_URL = "https://drive.google.com/uc?export=download&id=1OkPayypZxxDQmq1fe4c-jGX7qRUywvKA"
-CROP_TYPE_LE_URL = "https://drive.google.com/uc?export=download&id=1w_i_BnCTOO3hYaw3uC0AKjpZr4bGKrwZ"
-SOIL_TYPE_LE_URL = "https://drive.google.com/uc?export=download&id=1dKf0B9wE-KXZdzTVnNGosqptZ0e1Ly5W"
+CROP_MODEL_ID = "1ujgYFRPIHpi1E2Zg-oePAddC7-4PYpDN"
+FERT_MODEL_ID = "1APYnk3VrMPwGEHz5jKftAUwJgutqhQ0J"
+CROP_LE_ID = "11JyTimrKC2cddYzp6FpwoQrcgcw_nS0t"
+FERT_LE_ID = "1OkPayypZxxDQmq1fe4c-jGX7qRUywvKA"
+CROP_TYPE_LE_ID = "1w_i_BnCTOO3hYaw3uC0AKjpZr4bGKrwZ"
+SOIL_TYPE_LE_ID = "1dKf0B9wE-KXZdzTVnNGosqptZ0e1Ly5W"
 
 # ===============================
 # DOWNLOAD HELPER
 # ===============================
-def download_file(url, save_path):
-    print(f"Downloading {save_path} ...")
-    r = requests.get(url)
-    with open(save_path, "wb") as f:
-        f.write(r.content)
-    print(f"Downloaded {save_path}")
+def download_file_from_google_drive(file_id, destination):
+    URL = "https://drive.google.com/uc?export=download"
+    session = requests.Session()
+
+    response = session.get(URL, params={"id": file_id}, stream=True)
+    token = None
+
+    for key, value in response.cookies.items():
+        if key.startswith("download_warning"):
+            token = value
+
+    if token:
+        params = {"id": file_id, "confirm": token}
+        response = session.get(URL, params=params, stream=True)
+
+    with open(destination, "wb") as f:
+        for chunk in response.iter_content(32768):
+            if chunk:
+                f.write(chunk)
 
 # ===============================
 # REQUEST MODELS
@@ -132,7 +145,7 @@ def startup_event():
     for filename, url in files:
         file_path = os.path.join(MODEL_DIR, filename)
         if not os.path.exists(file_path):
-            download_file(url, file_path)
+            download_file_from_google_drive(file_id, file_path)
 
     print("Loading models...")
     (
