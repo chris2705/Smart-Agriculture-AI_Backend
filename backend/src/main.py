@@ -134,31 +134,30 @@ def startup_event():
     print("Checking ML model files...")
 
     files = [
-        ("crop_recommendation.joblib", CROP_MODEL_URL),
-        ("fertilizer_model.joblib", FERT_MODEL_URL),
-        ("label_encoder_crop.joblib", CROP_LE_URL),
-        ("label_encoder_fert.joblib", FERT_LE_URL),
-        ("label_encoder_crop_type.joblib", CROP_TYPE_LE_URL),
-        ("label_encoder_soil_type.joblib", SOIL_TYPE_LE_URL),
+        ("crop_recommendation.joblib", CROP_MODEL_ID),
+        ("fertilizer_model.joblib", FERT_MODEL_ID),
+        ("label_encoder_crop.joblib", CROP_LE_ID),
+        ("label_encoder_fert.joblib", FERT_LE_ID),
+        ("label_encoder_crop_type.joblib", CROP_TYPE_LE_ID),
+        ("label_encoder_soil_type.joblib", SOIL_TYPE_LE_ID),
     ]
 
-    for filename, url in files:
+    for filename, file_id in files:
         file_path = os.path.join(MODEL_DIR, filename)
         if not os.path.exists(file_path):
+            print(f"Downloading {filename}...")
             download_file_from_google_drive(file_id, file_path)
 
     print("Loading models...")
-    (
-        CROP_MODEL,
-        FERT_MODEL,
-        CROP_LE,
-        FERT_LE,
-        CROP_TYPE_LE,
-        SOIL_TYPE_LE,
-    ) = load_models()
+
+    CROP_MODEL = joblib.load(os.path.join(MODEL_DIR, "crop_recommendation.joblib"))
+    FERT_MODEL = joblib.load(os.path.join(MODEL_DIR, "fertilizer_model.joblib"))
+    CROP_LE = joblib.load(os.path.join(MODEL_DIR, "label_encoder_crop.joblib"))
+    FERT_LE = joblib.load(os.path.join(MODEL_DIR, "label_encoder_fert.joblib"))
+    CROP_TYPE_LE = joblib.load(os.path.join(MODEL_DIR, "label_encoder_crop_type.joblib"))
+    SOIL_TYPE_LE = joblib.load(os.path.join(MODEL_DIR, "label_encoder_soil_type.joblib"))
 
     print("Models loaded successfully.")
-
 # ===============================
 # 🌱 CROP PREDICTION
 # ===============================
